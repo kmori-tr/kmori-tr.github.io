@@ -88,10 +88,8 @@ li { margin-bottom: 4px; }
 }
 
 .about .photo {
-  width: 160px;
-  height: 160px;
-  border-radius: 4px;
-  object-fit: cover;
+  width: 180px;
+  height: auto;
   flex-shrink: 0;
   border: 1px solid var(--rule);
 }
@@ -118,6 +116,6 @@ footer {
 
 @media (max-width: 600px) {
   .about { flex-direction: column; }
-  .about .photo { width: 120px; height: 120px; }
+  .about .photo { width: 120px; height: auto; }
   header.site .name { font-size: 1.7rem; }
 }

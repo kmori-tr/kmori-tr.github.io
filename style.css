@@ -1,0 +1,123 @@
+:root {
+  --bg: #fafafa;
+  --fg: #1a1a1a;
+  --muted: #555;
+  --accent: #1f3864;
+  --rule: #ddd;
+  --max: 760px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Georgia", "Times New Roman", serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.65;
+  font-size: 17px;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+header.site {
+  padding: 48px 0 24px;
+  border-bottom: 1px solid var(--rule);
+}
+
+header.site .name {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+header.site .tagline {
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 4px;
+}
+
+nav {
+  margin-top: 16px;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.9rem;
+}
+
+nav a {
+  margin-right: 18px;
+  color: var(--muted);
+}
+
+nav a:hover { color: var(--accent); }
+
+main { padding: 40px 0 80px; }
+
+section { margin-bottom: 56px; }
+
+h2 {
+  font-size: 1.35rem;
+  margin-bottom: 16px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--rule);
+  color: var(--accent);
+}
+
+h3 {
+  font-size: 1.05rem;
+  margin: 18px 0 4px;
+  font-weight: 700;
+}
+
+p { margin-bottom: 12px; }
+
+ul { padding-left: 20px; margin-bottom: 12px; }
+li { margin-bottom: 4px; }
+
+.about {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.about .photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 4px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--rule);
+}
+
+.about .bio p { margin-bottom: 10px; }
+
+.entry { margin-bottom: 18px; }
+.entry .title { font-weight: 700; }
+.entry .meta { color: var(--muted); font-size: 0.92rem; font-style: italic; }
+
+.pub { margin-bottom: 12px; text-indent: -1.4em; padding-left: 1.4em; }
+.pub .num { font-weight: 700; }
+
+.contact-list { list-style: none; padding: 0; }
+.contact-list li { margin-bottom: 6px; }
+
+footer {
+  border-top: 1px solid var(--rule);
+  padding: 24px 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+@media (max-width: 600px) {
+  .about { flex-direction: column; }
+  .about .photo { width: 120px; height: 120px; }
+  header.site .name { font-size: 1.7rem; }
+}
